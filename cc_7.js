@@ -69,3 +69,14 @@ function calculateLoanInterest(principal, rate, years) {    //made function that
 
 console.log(`Total Interest $${calculateLoanInterest(1000, 0.05, 3)}`)
 console.log(`Total Interest $${calculateLoanInterest(5000, 0.07, 5)}`)
+
+//Task 6
+console.log("Task 6")
+
+let transactions = [500, 1200, 3000, 800, 2200] //declared array of test data
+function filterHighValueTransactions(transactions, filterFunction) {    //made the higher order function which uses
+    return transactions.filter(filterFunction);                     //the transactions array and a filterFunction yet to be defined
+}
+
+const result = filterHighValueTransactions(transactions, amount => amount > 1000)   //declare a variable result and call the function, then defined the filter function
+console.log(result);    //console.logged the result variable
