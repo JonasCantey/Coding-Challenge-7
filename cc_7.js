@@ -95,3 +95,17 @@ const createBudgetTracker = () => {    //created a function createBudgetTracker 
     let tracker = createBudgetTracker();
     console.log(tracker(300));
     console.log(tracker(200));
+
+//Task 8
+console.log("Task 8")
+                                            //recursive function to calculate revenue growth
+function calculateGrowth(years, revenue) {
+    if (years >= 10) {                      //base case: stop recursion when years reach 10
+        return `Projected Revenue: $${revenue.toFixed(2)}`;
+    }
+            //Recursive case: increases revenue by 5% and decrement the years
+    return calculateGrowth(years + 1, revenue * 1.05);
+}
+
+console.log(calculateGrowth(8, 1000));
+console.log(calculateGrowth(5, 5000));
