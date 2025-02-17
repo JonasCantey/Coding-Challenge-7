@@ -59,3 +59,13 @@ function calculateShippingCost(weight, location, expedited = false) { //Created 
 
 console.log(calculateShippingCost(10, "USA", true))
 console.log(calculateShippingCost(5, "Canada", false))
+
+//Task 5
+console.log("Task 5")
+
+function calculateLoanInterest(principal, rate, years) {    //made function that multiplies the three variables together
+    return (principal * rate * years).toFixed(2)    //added .toFixed(2) to show decimal places
+}
+
+console.log(`Total Interest $${calculateLoanInterest(1000, 0.05, 3)}`)
+console.log(`Total Interest $${calculateLoanInterest(5000, 0.07, 5)}`)
