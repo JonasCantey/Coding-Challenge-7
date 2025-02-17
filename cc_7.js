@@ -38,3 +38,24 @@ const calculateLoyaltyDiscount = (amount, years) => {   //Created arrow function
 
 console.log(calculateLoyaltyDiscount(100, 6));
 console.log(calculateLoyaltyDiscount(200, 2));
+
+//Task 4
+console.log("Task 4")
+
+function calculateShippingCost(weight, location, expedited = false) { //Created function
+    let baseCost;       //Declared variable baseCost. I did this so we could deal with the expedited value later on
+
+    if (location === "USA") {   //Said that if the location is the USA then use equation: 5 + .5 * weight
+        baseCost = 5 + (0.5 * weight) 
+    } else if (location === "Canada") { //said if location was Canada then use the eqn 10 + .7 * weight
+        baseCost = 10 + (0.7 * weight) 
+    }
+    if (expedited) {            //here I use the baseCost that we defined above and add 10 to it if the order was expedited
+        baseCost += 10
+    }
+    return `Shipping Cost: $${baseCost.toFixed(2)}` //tells the function what to return
+
+}
+
+console.log(calculateShippingCost(10, "USA", true))
+console.log(calculateShippingCost(5, "Canada", false))
